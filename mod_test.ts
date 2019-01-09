@@ -1,9 +1,9 @@
 // TODO: port this file to deno
 import index, { ParseOptions } from "./mod.ts";
 
-const describe = (str: string, func: () => void) => {}
-const it = (str: string, func: () => void) => {}
-const expect = (o: unknown): any => {}
+const describe = (str: string, func: () => void) => {};
+const it = (str: string, func: () => void) => {};
+const expect = (o: unknown): any => {};
 
 describe("Positional Arguments", () => {
   let options = [

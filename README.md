@@ -6,7 +6,7 @@ deno_minimist is a port of [Minimist2](https://github.com/berdon/minimist2) libr
 
 ```ts
 import * as deno from "deno";
-import minimist from "https://raw.githubusercontent.com/kt3k/deno_minimist/master/src/index.ts";
+import minimist from "https://raw.githubusercontent.com/kt3k/deno_minimist/master/mod.ts";
 const args = minimist(deno.args.slice(1));
 console.dir(args);
 ```

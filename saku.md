@@ -1,7 +1,7 @@
 # test
 
-    deno src/mod_test.ts
+    deno mod_test.ts
 
 # format
 
-    prettier --write src/*
+    prettier --write *.ts

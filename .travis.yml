@@ -2,4 +2,4 @@ language: python
 before_script:
   - curl -L https://deno.land/x/install/install.py | python - v0.2.6
 script:
-  - deno src/mod_test.ts
+  - deno mod_test.ts
