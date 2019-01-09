@@ -1,17 +1,19 @@
 # Simple
-```javascript
-// parse.js
-var argv = require('minimist2')(process.argv.slice(2));
-console.dir(argv);
+```ts
+// parse.ts
+import * as deno from "deno";
+import minimist from "https://github.com/kt3k/minimist";
+const args = minimist(deno.args.slice(1));
+console.dir(args);
 ```
 
 ```bash
-$ node parse.js -a beep -b boop
+$ deno parse.ts -a beep -b boop
 { _: [], a: 'beep', b: 'boop' }
 ```
 
 ```bash
-$ node parse.js -x 3 -y 4 -n5 -abc --beep=boop foo bar baz
+$ deno parse.ts -x 3 -y 4 -n5 -abc --beep=boop foo bar baz
 { _: [ 'foo', 'bar', 'baz' ],
   x: 3,
   y: 4,

@@ -1,41 +1,23 @@
-# Minimist2
-[![Build Status](https://travis-ci.org/berdon/minimist2.svg?branch=master)](https://travis-ci.org/berdon/minimist2) [![NPM Status](https://img.shields.io/npm/v/minimist2.svg)](https://www.npmjs.com/package/minimist2)
+# deno_minimist
 
-Minimist2 is a rewrite of the popular [Minimist](https://github.com/substack/minimist) Javascript library for argument parsing. The library aims to be a drop-in replacement with matching API footprint. It passes all original Minimist unit tests.
+deno_minimist is a port of [Minimist2](https://github.com/berdon/minimist2) library for argument parsing to deno.
 
-Minimist2 is written in TypeScript targetting ES6.
+# Usage
 
-# Installing
-```bash
-npm install minimist2
-```
-
-# Development
-1. Checkout the code
-    ```bash
-    git clone git@github.com:berdon/minimist2.git
-    npm install
-    ```
-2. Develop
-3. Run tests
-    ```bash
-    npm test
-    ```
-4. Submit a pull request
-
-# Using
-```javascript
-var argv = require('minimist2')(process.argv.slice(2));
-console.dir(argv);
+```ts
+import * as deno from "deno";
+import minimist from "https://raw.githubusercontent.com/kt3k/deno_minimist/master/src/index.ts";
+const args = minimist(deno.args.slice(1));
+console.dir(args);
 ```
 
 ```bash
-$ node example/parse.js -a beep -b boop
+$ deno example/parse.ts -a beep -b boop
 { _: [], a: 'beep', b: 'boop' }
 ```
 
 ```bash
-$ node example/parse.js -x 3 -y 4 -n5 -abc --beep=boop foo bar baz
+$ deno example/parse.ts -x 3 -y 4 -n5 -abc --beep=boop foo bar baz
 { _: [ 'foo', 'bar', 'baz' ],
   x: 3,
   y: 4,
