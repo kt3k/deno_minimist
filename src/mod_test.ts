@@ -1,5 +1,5 @@
 // TODO: port this file to deno
-import index, { ParseOptions } from "./index.ts";
+import index, { ParseOptions } from "./mod.ts";
 
 const describe = (str: string, func: () => void) => {}
 const it = (str: string, func: () => void) => {}

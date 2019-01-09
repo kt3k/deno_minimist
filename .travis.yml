@@ -1,14 +1,5 @@
-language: node_js
-node_js:
-  - "node"
-  - "8"
-  - "7"
+language: python
 before_script:
-  # Force minification prior to running tests
-  - npm run build
-deploy:
-  provider: npm
-  email: "berdon@gmail.com"
-  api_key: $NPMJS_AUTH_TOKEN
-  on:
-    branch: production
+  - curl -L https://deno.land/x/install/install.py | python - v0.2.6
+script:
+  - deno src/mod_test.ts

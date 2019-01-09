@@ -1,6 +1,6 @@
 # test
 
-    deno src/index.spec.ts
+    deno src/mod_test.ts
 
 # format
 
